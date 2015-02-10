@@ -24,7 +24,7 @@ $('#search').keyup(function() {
 function trackClick(){
 	var clientid = 'client_id=0bcc7c4bcd2b5b55b23ab538c02f70c0';
 	$('#tracks_list a').click(function(){
-		var url = $(this).data('url') +".json?"+ clientid;
+		var url = $(this).data('url') + "?"+ clientid;
 		var title = $(this).data('title');
 		var artist = $(this).data('artist');
 		$(this).addClass('playedSong');
