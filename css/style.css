@@ -61,6 +61,7 @@ footer {
 	font-weight: 300;
 }
 #tracks_list span {
+	font-size: 22px;
 	color:gray;
 }
 #tracks_list span b {
