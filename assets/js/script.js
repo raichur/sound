@@ -3,7 +3,7 @@ $('#search').keyup(function() {
 	$.ajax({
       url: "https://api.soundcloud.com/tracks.json?" + $('#search').serialize(),
       dataType: 'json',
-      beforeSend: 
+      beforeSend:
         function(data){
           $('#sounds').empty();
         },
@@ -41,6 +41,6 @@ function trackClick(){
   document.getElementById('player').play();
   document.title="Playing - Soundcloud Instant"
     return false;
-    
+
   });
 }

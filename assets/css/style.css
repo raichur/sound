@@ -1,21 +1,3 @@
-@font-face {
-	font-family: 'LatoLigIta';
-	src: url('Lato/Lato-LigIta.ttf');
-}
-@font-face {
-	font-family: 'LatoBol';
-	src: url('Lato/Lato-Bol.ttf');
-}
-@font-face {
-	font-family: 'Lato';
-	src: url('Lato/Lato-Lig.ttf');
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -37,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -61,9 +43,15 @@ table {
 }
 
 /* Basic elements */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic);
+
+* {
+	font-family: Avenir Next, Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+	margin: 0;
+	padding: 0;
+}
 body {
 	background-color: #1d1d1d;
-	font-family: 'LatoLigIta';
 	color:white;
 }
 /* Navigation */
@@ -103,7 +91,6 @@ body {
 	color:grey;
 	font-size:23px;
 	border:none;
-	font-family:'Lato';
 	font-weight: 100;
 }
 #q:focus {
@@ -119,21 +106,19 @@ footer {
 #tracks_list span, #tracks_list h4 {
 	margin-top:4px;
 	color:white;
-	font-family: 'Lato';
-	font-weight: 100;
+	font-weight: 300;
 }
 #tracks_list span {
 	color:gray;
 }
 #tracks_list span b {
-	font-weight: 800;
+	font-weight: 400;
 }
 #tracks_list h4 {
 	letter-spacing: 2px;
 }
 #tracks_list h2{
-	font-family: 'Lato';
-	font-weight: 100;
+	font-weight: 300;
 	color:white;
 	font-size:32px;
 	text-decoration: none;
@@ -155,7 +140,7 @@ footer {
 }
 #tracks_list li:hover {
 	padding-left:6%;
-} 
+}
 .plays {
 	font-style: italic;
 }
@@ -187,7 +172,7 @@ footer {
 	#tracks_list li:hover {
 	padding-left:5px;
 	padding-right:5px;
-	} 
+	}
 	#q {
 		font-size:20px;
 	}
