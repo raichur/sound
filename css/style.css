@@ -1,46 +1,4 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { border:0; font-size:100%; font:inherit; vertical-align:baseline; margin:0; padding:0; }  article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }  body { line-height:1; }  ol,ul { list-style:none; }  blockquote,q { quotes:none; }  blockquote:before,blockquote:after,q:before,q:after { content:none; }  table { border-collapse:collapse; border-spacing:0; }
 
 /* Basic elements */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic);
@@ -55,48 +13,41 @@ body {
 	color:white;
 }
 /* Navigation */
+
 #q {
-	position:fixed;
-	margin-top:-33px;
-	margin-left:90px;
+	top: 0;
 }
-#logo {
-	width:60px;
-	height:auto;
-	margin-left:10px;
+.wrapper {
+	padding-right:18%;
+	padding-left:18%;
 }
 #navbar {
-	position:fixed;
-	top:0;
+	padding: 10px;
+	top: 0;
+	position: fixed;
 	background: rgba(0,0,0,.9);
-	padding-top:10px;
-	padding-bottom: 10px;
 	width:100%;
-	margin:0;
-}
-#stuffInNavbar {
-	padding-right:5%;
-	padding-left:5%;
-	margin-left:0 auto;
-	margin-right:0 auto;
+	margin: 0;
+	transition: all ease .7s;
 }
 #navbar h2{
 	text-align:right;
 	float:right;
-	color:#ff7700;
+	opacity: 0.8;
 	margin-top:5px;
 }
 #q {
-	background:none;
-	color:grey;
-	font-size:23px;
-	border:none;
-	font-weight: 100;
+	background: none;
+	color: grey;
+	font-size: 24px;
+	border: none;
+	font-weight: 300;
 }
 #q:focus {
 	outline: none;
-	padding-bottom:12px;
-	border-bottom: 3px solid #ff7700;
+}
+#q:focus h2 {
+	opacity: 1;
 }
 footer {
 	bottom:0;
@@ -118,37 +69,32 @@ footer {
 	letter-spacing: 2px;
 }
 #tracks_list h2{
-	font-weight: 300;
+	font-weight: 400;
 	color:white;
-	font-size:32px;
+	font-size:26px;
 	text-decoration: none;
+	opacity: .8;
 }
 #tracks_list a {
 	text-decoration: none;
 }
-#tracks_list li:hover {
-	background: rgba(0,0,0,.2);
-}
-
 #tracks_list li {
 	padding-bottom:18px;
 	padding-top:18px;
-	padding-right:5%;
-	padding-left:5%;
 	list-style: none;
-	transition:.3s;
+	transition:.3s all ease;
 }
 #tracks_list li:hover {
-	padding-left:6%;
+	padding-left:1%;
+}
+#tracks_list li:hover h2 {
+	opacity: 1;
 }
 .plays {
 	font-style: italic;
 }
 #sounds {
 	margin-top:50px;
-}
-.playedSong li {
-	background:black;
 }
 .playedSong li h2, .playedSong li span{
 	color:#ff7700 !important;

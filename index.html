@@ -8,16 +8,15 @@
 </head>
 <body>
 	<div id="navbar">
-		<div id="stuffInNavbar">
-			<img src="assets/img/logo.png" id="logo">
-			<form id="search"  action="javascript:void(0);">
-				<input id="q" name="q" autofocus="true"placeholder="Search SoundCloud">
-				<input type="hidden" name="client_id" value="0bcc7c4bcd2b5b55b23ab538c02f70c0">
-				<input type="hidden" name="order" value="hotness">
-			</form>
-		</div>
+	<div class="wrapper">
+		<form id="search"  action="javascript:void(0);">
+			<input id="q" name="q" autofocus="true" autocomplete="off" placeholder="Search SoundCloud">
+			<input type="hidden" name="client_id" value="0bcc7c4bcd2b5b55b23ab538c02f70c0">
+			<input type="hidden" name="order" value="hotness">
+		</form>
 	</div>
-	<div id="container">
+	</div>
+	<div class="wrapper">
 		<audio id="player"></audio>
 		<div id="sounds"></div>
 	</div>
