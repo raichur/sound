@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic);
 
 * {
-	font-family: Avenir Next, Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+	font-family: Avenir Next, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -144,10 +144,11 @@ svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 	#q {
 		font-size: 1.2rem;
 		padding-top: 4px;
+		max-width: 140px;
 	}
 }
 
-.pp-slider { float:left;  -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; height: 30px; margin-top: 10px; margin-bottom: -10px; margin-right: 20px;}
+.pp-slider { float:left;  -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; height: 30px; margin-top: 10px; margin-bottom: -10px; margin-right: 10px;}
 .pp-slider .pp-slider-scale { background-color: #aaa; height: 1px; border-bottom: 1px solid #efefef; width: 70px; margin-top: 6px; float: left; }
 .pp-slider .pp-slider-scale .pp-slider-button { width: 12px; border-radius: 2px; border: 1px solid #adadad; height: 16px; position: relative; top: -7px; left: 46.5px; background-color: #efefef; cursor: pointer; }
 .pp-slider .pp-slider-scale .pp-slider-button .pp-slider-divies { border-left: 1px solid #adadad; border-right: 1px solid #adadad; position: relative; left: 3px; top: 3px; width: 4px; height: 10px; }
