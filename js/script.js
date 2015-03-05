@@ -44,6 +44,18 @@ $('#search').keyup(function() {
 $(function(){
 	$('#q').attr('value', favSongs[Math.floor(Math.random()*favSongs.length)]);
 	getSongs();
+	$('body').keyup(function(e){
+	   if(e.keyCode == 32 && !($("#q").is(":focus"))){
+			e.preventDefault();
+			if(audioPlayer.paused){
+				audioPlayer.play();
+				$('#play').html('<svg width="2em"><use xlink:href="#icon-pause"/></svg>');
+			} else {
+				audioPlayer.pause();
+				$('#play').html('<svg width="2em"><use xlink:href="#icon-play"/></svg>');
+			}
+	   }
+	});
 });
 
 // Get sound from SoundCloud
