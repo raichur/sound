@@ -116,6 +116,7 @@ footer {
 svg[width="0"] { clip:rect(0 0 0 0); height: 0; overflow: hidden; position: absolute; width: 0; }
 svg[width="1em"] { display: inline-block; height: 1.34ch; width: 1.34ch; }
 svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
+
 @media screen and (max-width: 900px) {
 	#tracks_list h2 {
 		font-size:26px;
@@ -124,7 +125,11 @@ svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 		display:none;
 	}
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+	.wrapper {
+		padding-right:3%;
+		padding-left:3%;
+	}
 	#tracks_list h2 {
 		font-size:23px;
 	}
@@ -135,12 +140,5 @@ svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 	#tracks_list li:hover {
 	padding-left:5px;
 	padding-right:5px;
-	}
-	#q {
-		font-size:20px;
-	}
-	#q:focus{
-		padding-top:3px;
-		padding-bottom:12px !important;
 	}
 }
