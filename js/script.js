@@ -3,7 +3,8 @@ var clientid = 'client_id=0bcc7c4bcd2b5b55b23ab538c02f70c0';
 var audioPlayer = document.getElementById('player');
 var soundName = "";
 var favSongs = ['Heroes', 'Ed Sheeran', 'Smle', 'Maroon 5', 'The Script', 'Coldplay', 'Skrillex', 'Deadmau5'];
-
+var itemsArray = [];
+var currentSongUrl;
 
 function getSongs() {
 	$.ajax({
@@ -16,9 +17,13 @@ function getSongs() {
 		success:
 		function(data){
 			$('#sounds').html('');
+			itemsArray = [];
 			var items = [];
 			$.each(data, function(key, val){
-				items.push("<div id='tracks_list'><a data-artist='"+val.user.username+"' data-title='"+val.title+ "' data-url=" + val.stream_url + " href='javascript:void();'><li><h2>"+val.title+"</h2><span class='plays'><b>"+ val.user.username+  "</b> " + val.playback_count+ " plays</span></li></a>");
+				if(val.stream_url) {
+					itemsArray.push(val.stream_url);
+					items.push("<div id='tracks_list'><a data-artist='"+val.user.username+"' data-title='"+val.title+ "' data-url=" + val.stream_url + " href='javascript:void();'><li><h2>"+val.title+"</h2><span class='plays'><b>"+ val.user.username+  "</b> " + val.playback_count + " plays " +  ((val.duration)/60000).toFixed(2) + " min</span></li></a>");
+				}
 			});
 			$('#sounds').html(items.join(' '));
 			trackClick();
@@ -29,6 +34,7 @@ function getSongs() {
 				var artist = $('#tracks_list:first-child a').data('artist');
 				$('#navbar h2').html(title);
 				audioPlayer.src = url;
+				currentSongUrl = url;
 				audioPlayer.load();
 				document.getElementById('player').play();
 				return false;
@@ -58,6 +64,32 @@ $(function(){
 	});
 });
 
+$('#next').click(function(){
+	next();
+});
+
+$('#previous').click(function(){
+	previous();
+});
+
+document.getElementById('player').addEventListener("ended", function() {
+	next();
+});
+
+function previous(){
+	audioPlayer.src = itemsArray[itemsArray.indexOf(currentSongUrl)] + "?"+ clientid;
+	audioPlayer.load();
+	currentSongUrl = itemsArray[itemsArray.indexOf(currentSongUrl)-1];
+	document.getElementById('player').play();
+}
+
+function next(){
+	audioPlayer.src = itemsArray[itemsArray.indexOf(currentSongUrl)+2] + "?"+ clientid;
+	audioPlayer.load();
+	currentSongUrl = itemsArray[itemsArray.indexOf(currentSongUrl)+1];
+	document.getElementById('player').play();
+}
+
 // Get sound from SoundCloud
 function trackClick(){
 	$('#tracks_list a').click(function(){
@@ -67,6 +99,7 @@ function trackClick(){
 		var artist = $(this).data('artist');
 		$('#navbar h2').html(title);
 		audioPlayer.src = url;
+		currentSongUrl = url;
 		audioPlayer.load();
 		document.getElementById('player').play();
 		return false;
@@ -123,7 +156,7 @@ $('#play').click(function(e){
         };
 
         var getMousePosition = function (e) {
-          
+
           var posx = 0;
           var posy = 0;
 
@@ -180,8 +213,6 @@ $('#play').click(function(e){
         $(document).mouseup(function(e){ dropCallback(e); });
 
     };
-
-    /*******************************************************************************************************/
 
     $.fn.PPSlider = function (options) {
         var opts = $.extend({}, $.fn.PPSlider.defaults, options);

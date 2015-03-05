@@ -104,7 +104,7 @@ footer {
 #controls svg {
 	height: 30px;
 }
-#play {
+#play, #previous, #next {
 	fill: white;
 	text-decoration: none;
 	cursor: pointer;
