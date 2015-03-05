@@ -7,13 +7,100 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="0">
+	<symbol id="icon-fullscreen-enter" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 4 33 L 13 42 L 23 32 L 32 41 L 22 51 L 31 60 L 4 60 M 33 4 L 42 13 L 32 23 L 41 32 L 51 22 L 60 31 L 60 4"/>
+	</symbol>
+
+	<symbol id="icon-fullscreen-leave" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 1 36 L 10 45 L 0 55 L 9 64 L 19 54 L 28 63 L 28 36 M 36 1 L 45 10 L 55 0 L 64 9 L 54 19 L 63 28 L 36 28"/>
+	</symbol>
+
+	<symbol id="icon-carrot-n" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 32 58 0 6 64 6"/>
+	</symbol>
+
+	<symbol id="icon-carrot-e" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 58 32 6 0 6 64"/>
+	</symbol>
+
+	<symbol id="icon-carrot-s" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 32 6 0 58 64 58"/>
+	</symbol>
+
+	<symbol id="icon-carrot-w" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 6 32 58 0 58 64"/>
+	</symbol>
+
+	<symbol id="icon-chevron-n" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 32 10 L 64 42 L 55 50 L 32 28 L 9 50 L 0 42"/>
+	</symbol>
+
+	<symbol id="icon-chevron-e" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 54 32 L 22 64 L 14 55 L 36 32 L 14 9 L 22 0"/>
+	</symbol>
+
+	<symbol id="icon-chevron-s" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 32 54 L 0 22 L 9 14 L 32 36 L 55 14 L 64 22"/>
+	</symbol>
+
+	<symbol id="icon-chevron-w" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 10 32 L 42 0 L 50 9 L 28 32 L 50 55 L 42 64"/>
+	</symbol>
+
+	<symbol id="icon-menu" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 0 2 L 64 2 L 64 14 L 0 14 M 0 27 L 64 27 L 64 39 L 0 39 M 0 52 L 64 52 L 64 64 L 0 64"/>
+	</symbol>
+
+	<symbol id="icon-exit" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 4 10 L 10 4 L 32 26 L 54 4 L 60 10 L 38 32 L 60 54 L 54 60 L 32 38 L 10 60 L 4 54 L 26 32"/>
+	</symbol>
+
+	<symbol id="icon-play" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 23 20 L 47 32 L 23 44 M 32 64 A 32 32 0 1 1 32.001 64 M 32 58 A 26 26 0 1 0 31.999 58"/>
+	</symbol>
+
+	<symbol id="icon-pause" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 20 18 L 29 18 L 29 46 L 20 46 M 35 18 L 44 18 L 44 46 L 35 46 M 32 64 A 32 32 0 1 1 32.001 64 M 32 58 A 26 26 0 1 0 31.999 58"/>
+	</symbol>
+
+	<symbol id="icon-ellipsis-x" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 8 40 A 8 8 0 1 18.001 40 M 32 40 A 8 8 0 1 132.001 40 M 56 40 A 8 8 0 1 156.001 40"/>
+	</symbol>
+
+	<symbol id="icon-ellipsis-y" viewBox="0 0 32 64" fill="currentColor">
+		<path d="M 16 16 A 8 8 0 1 116.001 16 M 16 40 A 8 8 0 1 116.001 40 M 16 64 A 8 8 0 1 116.001 64"/>
+	</symbol>
+
+	<symbol id="icon-volume" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 0 22 L 12 22 L 32 5 L 32 59 L 12 42 L 0 42 M 36,22 A 10,10 0 0 1 36,42 L 36,38 A 5,5 0 0 0 36,26 M 38,14 A 9,10 0 0 1 38,50 L 37,46 A 5,5 0 0 0 37,18 M 41,6  A 11,13 0 0 1 41,58 L 39,54 A 9,10 0 0 0 39,10"/>
+	</symbol>
+
+	<symbol id="icon-volume-med" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 0 22 L 12 22 L 32 5 L 32 59 L 12 42 L 0 42 M 36,22 A 10,10 0 0 1 36,42 L 36,38 A 5,5 0 0 0 36,26 M 38,14 A 9,10 0 0 1 38,50 L 37,46 A 5,5 0 0 0 37,18"/>
+	</symbol>
+
+	<symbol id="icon-volume-low" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 0 22 L 12 22 L 32 5 L 32 59 L 12 42 L 0 42 M 36,22 A 10,10 0 0 1 36,42 L 36,38 A 5,5 0 0 0 36,26"/>
+	</symbol>
+
+	<symbol id="icon-volume-mute" viewBox="0 0 64 64" fill="currentColor">
+		<path d="M 0 22 L 12 22 L 32 5 L 32 59 L 12 42 L 0 42"/>
+	</symbol>
+</svg>
+
 	<div id="navbar">
 	<div class="wrapper">
-		<div class="playPauseToggle">Play</div>
+		<div id="controls">
+				<a href="#" id="play"><svg width="2em"><use xlink:href="#icon-pause"/></svg></a>
+		</div>
 		<form id="search"  action="javascript:void(0);">
 			<input id="q" name="q" autofocus="true" autocomplete="off" placeholder="Search SoundCloud">
 			<input type="hidden" name="client_id" value="0bcc7c4bcd2b5b55b23ab538c02f70c0">
 			<input type="hidden" name="order" value="hotness">
+			<input type="hidden" name="streamable" value="true">
+			<input type="hidden" name="sharing" value="public">
 		</form>
 	</div>
 	</div>

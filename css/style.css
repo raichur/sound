@@ -27,7 +27,7 @@ body {
 	position: fixed;
 	background: rgba(0,0,0,.9);
 	z-index: 5;
-	width:100%;
+	width: 100%;
 	margin: 0;
 	transition: all ease .7s;
 }
@@ -35,12 +35,12 @@ body {
 	text-align:right;
 	float:right;
 	opacity: 0.8;
-	margin-top:5px;
+	margin-top: 5px;
 }
 #q {
 	background: none;
 	color: grey;
-	font-size: 24px;
+	font-size: 1.6rem;
 	border: none;
 	font-weight: 300;
 }
@@ -87,7 +87,7 @@ footer {
 	transition:.3s all ease;
 }
 #tracks_list li:hover {
-	padding-left:1%;
+	padding-left: 1%;
 }
 #tracks_list li:hover h2 {
 	opacity: 1;
@@ -98,9 +98,24 @@ footer {
 #sounds {
 	margin-top:50px;
 }
-.playedSong li h2, .playedSong li span{
-	color:#ff7700 !important;
+#controls {
+	float: right;
 }
+#controls svg {
+	height: 30px;
+}
+#play {
+	fill: white;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+}
+#play span {
+	margin-top: -20px;
+}
+svg[width="0"] { clip:rect(0 0 0 0); height: 0; overflow: hidden; position: absolute; width: 0; }
+svg[width="1em"] { display: inline-block; height: 1.34ch; width: 1.34ch; }
+svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 @media screen and (max-width: 900px) {
 	#tracks_list h2 {
 		font-size:26px;
