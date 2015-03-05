@@ -56,8 +56,7 @@ footer {
 }
 /* Songs list */
 #tracks_list span, #tracks_list h4 {
-	margin-top:4px;
-	color:white;
+	color: white;
 	font-weight: 300;
 }
 #tracks_list span {
@@ -76,6 +75,7 @@ footer {
 	font-size:26px;
 	text-decoration: none;
 	opacity: .8;
+	margin-bottom: 6px;
 }
 #tracks_list a {
 	text-decoration: none;
@@ -140,6 +140,10 @@ svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 	#tracks_list li:hover {
 	padding-left:5px;
 	padding-right:5px;
+	}
+	#q {
+		font-size: 1.2rem;
+		padding-top: 4px;
 	}
 }
 
