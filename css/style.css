@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic);
 
 * {
-	font-family: Avenir Next, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	font-family: Avenir Next, Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
 	margin: 0;
 	padding: 0;
 }
@@ -141,10 +141,15 @@ svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 	padding-left:5px;
 	padding-right:5px;
 	}
+	#tracks_list span {
+		font-size: 19px;
+	}
+	.pp-slider {
+		display: none;
+	}
 	#q {
 		font-size: 1.2rem;
 		padding-top: 4px;
-		max-width: 140px;
 	}
 }
 

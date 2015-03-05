@@ -22,7 +22,7 @@ function getSongs() {
 			$.each(data, function(key, val){
 				if(val.stream_url) {
 					itemsArray.push(val.stream_url);
-					items.push("<div id='tracks_list'><a data-artist='"+val.user.username+"' data-title='"+val.title+ "' data-url=" + val.stream_url + " href='javascript:void();'><li><h2>"+val.title+"</h2><span class='plays'><b>"+ val.user.username+  "</b> " + val.playback_count + " plays " +  ((val.duration)/60000).toFixed(2) + " min</span></li></a>");
+					items.push("<div id='tracks_list'><a data-artist='"+val.user.username+"' data-title='"+val.title+ "' data-url=" + val.stream_url + " href='javascript:void();'><li><h2>" + val.title + "</h2><span class='plays'><b>"+ val.user.username+  "</b> " + (val.playback_count/1000).toFixed(2) + "k plays (" +  ((val.duration)/60000).toFixed(2) + " min)</span></li></a>");
 				}
 			});
 			$('#sounds').html(items.join(' '));
