@@ -150,6 +150,7 @@ svg[width="0.5em"] { display: inline-block; height: 1.34ch; width: 0.67ch; }
 	#q {
 		font-size: 1.2rem;
 		padding-top: 4px;
+		max-width: 120px;
 	}
 }
 
