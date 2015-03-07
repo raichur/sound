@@ -55,10 +55,10 @@ $(function(){
 			e.preventDefault();
 			if(audioPlayer.paused){
 				audioPlayer.play();
-				$('#play').html('<svg width="1.7em"><use xlink:href="#icon-pause"/></svg>');
+				$('#play').html('<svg width="2em"><use xlink:href="#icon-pause"/></svg>');
 			} else {
 				audioPlayer.pause();
-				$('#play').html('<svg width="1.7em"><use xlink:href="#icon-play"/></svg>');
+				$('#play').html('<svg width="2em"><use xlink:href="#icon-play"/></svg>');
 			}
 	   }
 	});
