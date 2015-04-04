@@ -2,7 +2,6 @@
 var clientid = 'client_id=0bcc7c4bcd2b5b55b23ab538c02f70c0';
 var audioPlayer = document.getElementById('player');
 var soundName = "";
-var favSongs = ['Heroes', 'Ed Sheeran', 'Smle', 'Maroon 5', 'The Script', 'Coldplay', 'Skrillex', 'Deadmau5'];
 var itemsArray = [];
 var currentSongUrl;
 
@@ -48,7 +47,6 @@ $('#search').keyup(function() {
 });
 
 $(function(){
-	$('#q').attr('value', favSongs[Math.floor(Math.random()*favSongs.length)]);
 	getSongs();
 	$('body').keyup(function(e){
 	   if(e.keyCode == 32 && !($("#q").is(":focus"))){
@@ -111,10 +109,10 @@ $('#play').click(function(e){
 	e.preventDefault();
 	if(audioPlayer.paused){
 		audioPlayer.play();
-		$('#play').html('<svg width="1.4em"><use xlink:href="#icon-pause"/></svg>');
+		$('#play').html('<svg width="2em"><use xlink:href="#icon-pause"/></svg>');
 	} else {
 		audioPlayer.pause();
-		$('#play').html('<svg width="1.4em"><use xlink:href="#icon-play"/></svg>');
+		$('#play').html('<svg width="2em"><use xlink:href="#icon-play"/></svg>');
 	}
 });
 (function ($) {
